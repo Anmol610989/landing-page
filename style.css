@@ -211,7 +211,7 @@ body {
 }
 
 .creations .btn{
-    justify-self: center;
+    justify-self: end;
     align-self: center;
     text-decoration: none;
     font-size: 0.8rem;
