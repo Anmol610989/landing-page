@@ -26,26 +26,33 @@ body {
     min-height: 100vh;
     font-family: "Alata", sans-serif;;
     margin-bottom: 5rem;
-    
-}
 
-.menu{
+   
+}
+.menu-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-content: center;
-    padding: 3rem 0;
+    padding: 40px 0;
 }
 
-.menu .logo{
-    font-size: 4rem;
+.under-line{
+    border: 1px solid #fff;
+    width: 15px;
+    margin: auto;
+    display: none;
+    margin-top: 2px;
+}
+
+.list-item:hover  .under-line{
+    display: block;
 }
 
 .menu .list-items{
     display: flex;
     width: 40%;
     justify-content: space-between;
-    align-content: flex-end;
+    align-items: center;
 }
 
 .menu .list-items li{
@@ -57,12 +64,14 @@ body {
     color: hsl(0, 0%, 100%);
     font-size: 14px;
 }
-.menu .list-items li a:hover::after{
+
+.footer-menu ul li:hover::after{
     content: "";
     display: block;
     border: 2px solid #fff;
     width: 10px;
     margin: auto;
+
 }
 
 .hamburger{
@@ -99,17 +108,18 @@ body {
 .mobile-nav{
     margin: auto;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: black;
     color: #fff;
     display: none;
     width: 100vw;
     height: 100vh;
-    z-index: 999;
-    padding: 80px;
+    z-index: 999;  
+    padding-top: 20px; 
+}
+
+.menu-container{
+    align-items: center;
 }
 
 .mobile-menu-logo{
@@ -132,6 +142,7 @@ body {
     
 }
 
+
 .mobile-menu-logo .close-btn{
     border: none;
     background: none;
@@ -139,7 +150,6 @@ body {
     z-index: 999;
     padding: 0;
     margin: 0;
-    
 }
 
 .close-btn span{
@@ -206,12 +216,25 @@ body {
 }
 
 .creations h1{
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-size: 3rem;
+    font-weight: 400;
     align-self: center;
 }
 
 .creations .btn{
+    justify-self: end;
+    align-self: center;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    background-color: #fff;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    letter-spacing: 3px;
+    cursor: pointer;
+
+
     justify-self: end;
     align-self: center;
     text-decoration: none;
@@ -521,7 +544,6 @@ body {
     .creations{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        font-size: 1.5rem;
     }
 
     .creations h1{
